@@ -1,0 +1,16 @@
+counter:
+  init: 0
+  step: 1
+  volume: 2048
+  unit_size: 8
+
+transform:
+  src:
+    - format: 8
+      scaler: 8
+    - format: 3
+      scaler: 2048
+
+  dst:
+    - format: 11
+      scaler: 8

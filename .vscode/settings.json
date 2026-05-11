@@ -1,0 +1,35 @@
+{
+    "cmake.buildBeforeRun": true,
+    "C_Cpp.errorSquiggles": "enabled",
+
+    "cmake.debugConfig": {
+        "args": [
+                                                             // [ 0 ]  appname
+            "s",                                             // [ 1 ]  Command
+            "../examples/font1def.c16",                      // [ 2 ]  Source: .c16 font file
+            "../results/font1def.c16/font1def_attr.bin",     // [ 3 ]  Result: 256 attrs block
+            "../results/font1def.c16/font1def_orig.bmp",     // [ 4 ]  Result: orig B&W .bmp
+            "../results/font1def.c16/font1def_high.bmp",     // [ 5 ]  Result: highligted .bmp
+            "../results/font1def.c16/font1def_mirr.bmp",     // [ 6 ]  Result: mirr B&W .bmp
+            "../results/font1def.c16/font1def_orig.cells",   // [ 7 ]  Result: original .cells
+            "../results/font1def.c16/font1def_high.cells",   // [ 8 ]  Result: highlight .cells
+            "../results/font1def.c16/font1def_mirr.cells"    // [ 9 ]  Result: split .cells
+
+            // "s",                                // [1]  Command
+            // "../examples/font2sml.c16",         // [2]  Source: .c16 font file
+            // "../results/font2sml_out.c16",      // [3]  Result: .c16 font file
+            // "../results/font2sml_atr.bin",      // [4]  Result: 256 attrs block
+            // "../results/font2sml.bmp",          // [5]  Result: orig B&W .bmp
+            // "../results/font2sml_s.bmp",        // [6]  Result: mirr B&W .bmp
+            // "../results/font2sml_orig.cells",   // [7]  Result: highlight .cells
+            // "../results/font2sml_mirr.cells"    // [8]  Result: split .cells
+
+        ]
+    }
+}
+
+// "font2sml.c16"
+
+// // Output Restored
+// std::string fname_res_c16 = ospath(folderResult, "font2sml_res.c16");
+// return verror("debugging", 100);
