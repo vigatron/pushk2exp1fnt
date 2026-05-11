@@ -1,7 +1,13 @@
 ### PUSHK experimental filter 'pushk2exp1fnt'
 
-Author: Viktor Glebov
-Date: 12 May 2026
+[![C++](https://img.shields.io/badge/C%2B%2B-17-blue.svg)](https://isocpp.org/)
+[![CMake](https://img.shields.io/badge/CMake-3.16+-green.svg)](https://cmake.org/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
+**Filter name** `pushk2exp1fnt`  
+**Author** V01G04A81 Viktor Glebov  
+**Date** 12 May 2026  
 
 ## CP866 Glyph coder
 
