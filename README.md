@@ -176,7 +176,7 @@ Date: 12 May 2026
 
 </small>
 
-*Notes:*
+*Notes:*  
 "_orig.cells" - original .cells font file  
 "_mirr.cells" - optimized .cells font file ( additionally ~32..50 bytes stored in _attr.bin for recovery )  
 "_b.cells" files - transformed layout with pushk2pre1move filter / cl_filter_b.yaml  
