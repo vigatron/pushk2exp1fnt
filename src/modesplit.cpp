@@ -24,15 +24,15 @@ std::vector<uint8_t> SearchForSymmetry(const c16cell & c16);
 void ApplyPSGraph(c16cell & c16) {
 
     // Pseudo Graph : find center point
-    sym8x8 cpnt;
+    sym8x8 symcrs;
     PGlyph psglyph;
 
     // Определение осей и параметров линий
-    cpnt.set(c16.getsinglecell(CENTER_POINT_SYM_S) );
-    psglyph.find_cpnt_single(cpnt);
+    symcrs.set(c16.getsinglecell(CENTER_POINT_SYM_S) );
+    psglyph.FindCenterPointSingle(symcrs);
 
-    cpnt.set(c16.getsinglecell(CENTER_POINT_SYM_D) );
-    psglyph.find_cpnt_double(cpnt);
+    symcrs.set(c16.getsinglecell(CENTER_POINT_SYM_D) );
+    psglyph.FindCenterPointDouble(symcrs);
 
     // Применение фильтра
     for( uint8_t i = SYM_PSEUDO_FIRST; i <= SYM_PSEUDO_LAST; i++) {
