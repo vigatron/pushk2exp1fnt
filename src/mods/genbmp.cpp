@@ -56,7 +56,7 @@ verr genbmp( CELLS256 & c256, const std::string & fname, bool forcebw ) {
                 int offs = cx + cy * 256;
                 uint8_t color8bit = c256.getPixel(symn, x, y);
                 int colorbw  = color8bit ? 0xFFFFFF : 0;
-                int colorrgb = CLR32(color8bit);
+                int colorrgb = VHCLR256::clr32(color8bit);
                 pixels[offs] = forcebw ? colorbw : colorrgb; } } }
 
     saveBMP(fname, pixels, width, height);

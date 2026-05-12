@@ -2,12 +2,13 @@ cmake_minimum_required(VERSION 3.16)
 
 project(pushk2exp1fnt LANGUAGES CXX)
 
-include_directories(${CMAKE_SOURCE_DIR}/src
-                    ${CMAKE_SOURCE_DIR}/src/mods
-                    ${CMAKE_SOURCE_DIR}/src/font
-                    ${CMAKE_SOURCE_DIR}/src/misc
-                    ${CMAKE_SOURCE_DIR}/src/pseudo
-                    )
+include_directories(
+    ${CMAKE_SOURCE_DIR}/src
+    ${CMAKE_SOURCE_DIR}/src/mods
+    ${CMAKE_SOURCE_DIR}/src/font
+    ${CMAKE_SOURCE_DIR}/src/misc
+    ${CMAKE_SOURCE_DIR}/src/pseudo
+    ${CMAKE_SOURCE_DIR}/src/debug )
 
 # Опции компиляции
 set(CMAKE_CXX_STANDARD 17)
@@ -18,9 +19,10 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 # Источники
 file(GLOB_RECURSE source_list
     src/*
+    src/debug/*
     src/font/*
-	src/mods/*
-	src/misc/*
+    src/mods/*
+    src/misc/*
     src/pseudo/*
 )
 

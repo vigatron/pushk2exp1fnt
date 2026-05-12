@@ -1,4 +1,5 @@
 #include "vhplatform.hpp"
+#include "globaldefs.hpp"
 
 #include "errs.hpp"
 #include "misc/fileio.hpp"
