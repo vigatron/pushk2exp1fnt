@@ -58,7 +58,6 @@
 
 #### Фильтры симметрии
 
-<small>
 
 | ID | Enum        | Type                | Layout / Scheme | Description |
 |----|-------------|---------------------|-----------------|-------------|
@@ -71,7 +70,6 @@
 | 6  | `vattr413`  | Vertical Symmetry   | `4+1+3 rows`    | Asymmetric vertical split mode using 4 rows on one side and 3 mirrored XOR rows on the opposite side with preserved axis row. |
 | 7  | `vattr404`  | Vertical Symmetry   | `4+4 rows`      | Full horizontal-axis symmetry mode with equal top/bottom regions.<br>Bottom half encoded using XOR residual relative to mirrored top half. |
 
-</small>
 
 <br>
 
