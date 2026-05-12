@@ -153,17 +153,33 @@ def STEP_MutlipackAll(rexamples):
         rtbl.append( arrlog )
 
 
-
+    # ----------------------------------
     # Convert arrlog to markdown
-    arrmark = []
+    # ----------------------------------
+
+    # Header text
+    arrhdr = []
     markhdr = "| fname |"
     marksep = "|---|"
     for jcontent in rtbl[0]:
         markhdr += " " + jcontent['arch'] + " |"
         marksep += "---|"
-    arrmark.append(markhdr)
-    arrmark.append(marksep)
+    arrhdr.append("")
+    arrhdr.append("<br>")
+    arrhdr.append("")
+    arrhdr.append(markhdr)
+    arrhdr.append(marksep)
+
+    # Generate Markdown for x8 examples
+    arrmark = []
+    sepcnt = 0
     for item in rtbl:
+
+        # Header per file ( per 4 subtypes )
+        if not (sepcnt % 4):
+            arrmark.extend(arrhdr)
+        sepcnt+=1
+
         line = "| " + item[0]['fname'] + " |"
         for jparam in item:
             val = jparam['fsize']
