@@ -19,8 +19,7 @@ class PGlyph {
             
             arr.assign(W*H, 0);
 
-            if(symn < SYM_PSEUDO_FIRST) return arr;
-            if(symn > SYM_PSEUDO_LAST ) return arr;
+            if(symn < SYM_PSEUDO_FIRST || symn > SYM_PSEUDO_LAST) return arr;
 
             PGT pgt(symn);
             subcreate(pgt);
@@ -144,10 +143,10 @@ class PGlyph {
             if(pgt.isvline()) { sdraw_vertical(); return; }
 
             // Draw parts
-            if(pgt.validu()) { sdraw_u(); }
-            if(pgt.validd()) { sdraw_d(); }
-            if(pgt.validl()) { sdraw_l(); }
-            if(pgt.validr()) { sdraw_r(); } }
+            if(pgt.au()) { sdraw_u(); }
+            if(pgt.ad()) { sdraw_d(); }
+            if(pgt.al()) { sdraw_l(); }
+            if(pgt.ar()) { sdraw_r(); } }
 
         //------------------------------------------------------------------------------
         // 3-Edges Double
@@ -255,7 +254,7 @@ class PGlyph {
             // H-Line ?
             if(pgt.contn_h()) {
                 if(pgt.sngl()) sdraw_horizontal(); else ddraw_horizontal();
-                if(pgt.validu())
+                if(pgt.au())
                     { if(pgt.sngu()) sdraw_vrange(0, dbl_sy1()); else ddraw_vrange(0, sng_sy()); }
                 else
                     { if(pgt.sngd()) sdraw_vrange(dbl_sy2(), H-1); else ddraw_vrange(sng_sy(), H-1); }
@@ -264,7 +263,7 @@ class PGlyph {
             // V-Line ?
             if(pgt.contn_v()) {
                 if(pgt.sngu()) sdraw_vertical(); else ddraw_vertical();
-                if(pgt.validl())
+                if(pgt.al())
                     { if(pgt.sngl()) sdraw_hrange(0, dbl_sx1()); else ddraw_hrange(0, sng_sx()); }
                 else
                     { if(pgt.sngr()) sdraw_hrange(dbl_ex2(), W-1); else ddraw_hrange(sng_sx(), W-1); }
